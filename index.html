@@ -13,7 +13,11 @@
 		<p id="artist-credit">Credit to artist</p>
 		<div class="about-info"> 
 			<h3>Sumodex is a project that combines Sumo Wrestler Data in the fashion of
-		 	a Pokedex. So that all the data on your favorite Sumo Wrestlers is in one place.</h3>
+		 	a Pokedex.  
+			<br>
+			<br>
+			So that all the data on your favorite Sumo Wrestlers is in one place.</h3>
+
 			<p>Currently, only Makuuchi Sumo Wrestlers exist in the Sumodex because 
 			they are the only public profiles that I could find.</p>
 		</div>
@@ -27,13 +31,15 @@
 	<section id="sumodex-section">
 
 		<div class="sumodex-main">
-			<div class="wrestlerName"><p><c:out value="${wrestler.shikona}"/></p></div>
+			<div class="wrestlerName">
+				<p>Sumo name<!-- <c:out value="${wrestler.shikona}"/> --></p>
+			</div>
 
 			<div class="sumodex-content-container">
 
 				<div class="sumodex-left-side">
 					<div class="wrestlerPic">
-						<p>PIC</p>						
+						<img src="./HeaderPic.jpg"/>				
 					</div> 
 					<div class="picture-buttons">
 						<form method="GET" action="/wrestler/last/${wrestler.id}">
@@ -47,15 +53,15 @@
 
 					<div class="sumodex-right-side">
 						<div class="wrestlerInfo">
-							<p><strong>Shikona: </strong><c:out value="${wrestler.shikona}"/></p>
-							<p><strong>Real Name: </strong><c:out value="${wrestler.name}"/></p>
-							<p><strong>Rank: </strong><c:out value="${wrestler.sumoRank}"/></p>
-							<p><strong>Birthday: </strong><c:out value="${wrestler.birthday}"/></p>
-							<p><strong>Birthplace: </strong><c:out value="${wrestler.birthplace}"/></p>
-							<p><strong>Heya: </strong><c:out value="${wrestler.heya}"/></p>
-							<p><strong>Height: </strong><c:out value="${wrestler.height}"/></p>
-							<p><strong>Weight: </strong><c:out value="${wrestler.weight}"/></p>
-							<p><strong>Favorite Technique: </strong><c:out value="${wrestler.favTechnique}"/></p>
+							<p>Shikona: <c:out value="${wrestler.shikona}"/></p>
+							<p>Real Name: <c:out value="${wrestler.name}"/></p>
+							<p>Rank: <c:out value="${wrestler.sumoRank}"/></p>
+							<p>Birthday: <c:out value="${wrestler.birthday}"/></p>
+							<p>Birthplace:<c:out value="${wrestler.birthplace}"/></p>
+							<p>Heya: <c:out value="${wrestler.heya}"/></p>
+							<p>Height: <c:out value="${wrestler.height}"/></p>
+							<p>Weight: <c:out value="${wrestler.weight}"/></p>
+							<p>Favorite Technique: <c:out value="${wrestler.favTechnique}"/></p>
 						</div>
 						<div class="info-buttons">
 							<form method="GET" action="/wrestler/last/${wrestler.id}">
@@ -74,10 +80,34 @@
 		<!-- Links to profiles and youtubes? Sumodb, actual sumo website -- mouse will tell user what link is with hover -->
 		
 	</section>
+
+	<section class="accordion-container">
+
+		<button class="accordion">Sumo Ruleset</button>
+		<div class="panel">
+			<p>Some content</p>
+		</div>
+
+		<button class="accordion">Allowances</button>
+		<div class="panel">
+			<p>Some content</p>
+		</div>
+
+		<button class="accordion">Disqualifications</button>
+		<div class="panel">
+			<p>Some content</p>
+		</div>
+
+		<button class="accordion">Sumo Ruleset</button>
+		<div class="panel">
+			<p>Some content</p>
+		</div>
+	</section>
+
 	
 	<!-- <i class="arrow down"><p>Down arrow: </p></i> -->
 	
-	<section class="sumo-rules">
+	<!-- <section class="sumo-rules">
 	<h1>Sumo Ruleset</h1>
 		
 		<p>Sumo Tournaments last 15 days, where everyday, each Rikishi will need to wrestle another Sumo wrestlers. There will be always be one winner and 
@@ -251,6 +281,6 @@
 			<li>Jonidan</li>
 			<li>Jonokuchi</li>
 		</ul>
-	</section>
+	</section> -->
 </body>
 </html>
