@@ -2,7 +2,7 @@
 
 body{
 	margin: 0;
-	background: linear-gradient(56deg, rgba(224,246,117,1) 0%, rgb(104, 171, 253) 33%);
+	background: linear-gradient(355deg, rgba(224,246,117,1) 0%, rgba(74,144,228,1) 50%, rgba(81,72,242,1) 100%);;
 	font-family: 'Noto Sans JP', sans-serif;
 }
 
@@ -20,25 +20,30 @@ header {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	border-bottom: 6px black solid;
+	display: flex;
+	flex-direction: column;
 }
 
 #artist-credit {
 	text-align: right;
 	margin: 10px;
-	font-size: 10px;
+	font-size: 26px;
+	letter-spacing: 1px;
+	color: white;
 }
 
-#about-heading {
+#main-heading, #main-heading-jp {
 	font-family: Calisto MT,Bookman Old Style,Bookman,Goudy Old Style,Garamond,Hoefler Text,Bitstream Charter,Georgia,serif; 
 	font-size: 50px;
 	width: 100%;
-	padding: 20px 0 0;
-}
-
-#about-heading {
-  	-webkit-background-clip: text;
+	-webkit-background-clip: text;
   	-webkit-text-fill-color: mediumorchid;
   	-webkit-text-stroke: 2px gold;
+}
+
+#main-heading-jp {
+	letter-spacing: 20px;
 }
 
 .about-info {
@@ -50,6 +55,7 @@ header {
 	width: 90%;
 	margin: 20px auto;
 	box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+	color: white;
 }
 
 .about-info p {
@@ -70,24 +76,30 @@ header {
 #searchBar {
 	margin-top: 10px;
 	margin-bottom: 10px;
-	font-size: 25px;
+	font-size: 40px;
 }
 
 #searchBarButton {
 	width: 200px;
-	height: 30px;
-	margin-bottom: 10px
+	height: 50px;
+	margin: 10px;
+	background-color: yellow;
+	border-radius: 20px;
+	font-size: 30px;
+	font-weight: bold;
+	border: none;
 }
 
 #searchBarTitle {
-	font-size: 40px;
+	font-size: 50px;
 	margin: 20px 0 ;
+	color: white;
+	
 }
 /*---------------------SUMODEX-------------------------------*/
 #sumodex-section{
 	margin: 20px auto;
 	width: 100%;
-	height: 600px;
 	display: flex;
 	justify-content: center;
 }
@@ -95,7 +107,7 @@ header {
 .sumodex-main {
 	border: solid darkred 5px;
 	background: red;
-	width: 98%;
+	width: 90%;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
@@ -106,28 +118,24 @@ header {
 
 .sumodex-content-container {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	width: 100%;
 	height: 90%;
 	margin: 20px 0;
 }
 
 .sumodex-left-side {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	width: 50%;
-	height: 90%;
-	border-right: 3px solid black;
-
+	border-bottom: 3px solid black;
 }
-.sumodex-right-side {
+
+.sumodex-left-side, .sumodex-right-side {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	width: 50%;
+	width: 80%;
 	height: 90%;
 
 }
@@ -139,12 +147,11 @@ header {
 	width: 50%;
 	background-color: white;
 	color: black;
-	margin-top: 19px;
 }
 
 .wrestlerName p {
 	margin: 0;
-	font-size: 30px;
+	font-size: 50px;
 	text-align: center;
 	font-weight: 700;
 }
@@ -159,14 +166,20 @@ header {
 	border-radius: 10px;
 }
 
+.wrestlerPic {
+	margin-top: 40px;
+}
+.wrestlerInfo {
+	margin-top: 30px;
+}
+
 .wrestlerInfo p{
 	margin: 0 10px;
-	font-size: 20px;
+	font-size: 35px;
 }
 
 .wrestlerPic img {
 	object-fit: fill;
-	height: 100%;
 	width: 100%;
 }
 
@@ -178,44 +191,79 @@ header {
 
 .picture-buttons button, .info-buttons button {
 	margin: 40px 20px;
-	width: 100px;
-	height: 50px;
-	background: linear-gradient(135deg, rgba(22,22,22,1) 0%, rgba(6,56,117,1) 0%, rgba(72,140,222,1) 93%);
+	width: 300px;
+	height: 70px;
+	background: rgb(33, 147, 240); ;
 	border-radius: 20px;
 	color: white;
 	font-family: 'Noto Sans JP', sans-serif;
 	letter-spacing: .4px;
+	font-size: 30px;
 }
 	
+/*---------------------ACCORDION-------------------------------*/
 	
-	
+.accordion {
+	background-color: #eee;
+	color: #444;
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	text-align: left;
+	border: none;
+	outline: none;
+	transition: 0.4s;
+	font-size: 65px;
+  }
 
+  .accordion:first-child {
+	margin-top: 30px;
+  }
 
-/* .btn{
-	padding: 4px 8px;
-	background-color: #f44336;
-	color: white;
-	font-weight: bold
-	
+  .active, .accordion:hover {
+	background-color: #ccc;
+  }
+  
+  .panel {
+	padding: 0 18px;
+	background-color: white;
+	display: none;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+  }
+
+  .accordion:after {
+	content: '\02795'; /* Unicode character for "plus" sign (+) */
+	font-size: 40px;
+	color: #777;
+	float: right;
+	margin-left: 5px;
+  }
+  
+  .active:after {
+	content: "\2796"; /* Unicode character for "minus" sign (-) */
+  }
+
+  
+
+/*---------------------TOURNAMENT ----------------------------------*/
+
+.tournament-container table {
+	font-size: 35px;
 }
-	
 
-	
-	
-#about-heading-footnote{
-	font-size: 11px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 45%;
+tr:nth-child(even) {
+	background: rgb(224, 224, 224)
 }
 
+/*---------------------FOOTER-------------------------------*/
 
-.arrow {
-  border: solid black;
-  border-width: 0 3px 3px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 3px;
-}  */
+footer {
+	font-size: 50px;
+	text-align: center;
+	height: 100px;
+}
+
+footer a{
+	color: black;
+}
