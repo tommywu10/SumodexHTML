@@ -204,8 +204,8 @@ header {
 /*---------------------ACCORDION-------------------------------*/
 	
 .accordion {
-	background-color: #eee;
-	color: #444;
+	background-color: #ffb01d;
+	color: black;
 	cursor: pointer;
 	padding: 18px;
 	width: 100%;
@@ -213,15 +213,19 @@ header {
 	border: none;
 	outline: none;
 	transition: 0.4s;
-	font-size: 65px;
+	font-size: 55px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
   }
 
-  .accordion:first-child {
+  .accordion:first-ch5ild {
 	margin-top: 30px;
   }
 
   .active, .accordion:hover {
-	background-color: #ccc;
+	background-color: #f5cc80;
   }
   
   .panel {
@@ -233,28 +237,64 @@ header {
   }
 
   .accordion:after {
-	content: '\02795'; /* Unicode character for "plus" sign (+) */
-	font-size: 40px;
-	color: #777;
+	content: '\002B'; /* Unicode character for "plus" sign (+) */
+	font-size: 60px;
+	color: black;
 	float: right;
 	margin-left: 5px;
   }
   
   .active:after {
-	content: "\2796"; /* Unicode character for "minus" sign (-) */
+	content: "\02212"; /* Unicode character for "minus" sign (-) */
   }
 
+  .tournament-container {
+	background: linear-gradient(171deg, rgba(165,0,0,1) 0%, rgba(15,30,124,1) 64%, rgba(0,165,10,1) 100%);
+	color: white;
+  }
+
+  .sumo-ruleset-container {
+	background: linear-gradient(171deg, rgba(0,165,10,1) 0%, rgba(15,19,124,1) 44%, rgba(116,0,134,1) 100%);
+	color: white;
+  }
+  .sumo-ruleset-container img{
+	width: 100%;
+  }
+
+  .sumo-history-container {
+	background: linear-gradient(31deg, rgba(235,3,3,1) 0%, rgba(15,19,124,1) 45%, rgba(116,0,134,1) 100%);
+	color: white;
+  }
+
+  .sumo-history-container img {
+	  margin: 70px 0 0;
+	  width: 100%;
+  }
   
 
 /*---------------------TOURNAMENT ----------------------------------*/
 
 .tournament-container table {
 	font-size: 35px;
+	text-align: left;
+	color: white;
+}
+
+#recent-tournaments-table {
+	width: 100%;
+	font-size: 40px;
+	text-align: left;
+}
+
+#recent-tournaments-table th:nth-child(1){
+	width: 150px;
 }
 
 tr:nth-child(even) {
-	background: rgb(224, 224, 224)
+	background: rgba(63, 63, 63, 0.603)
 }
+
+
 
 /*---------------------FOOTER-------------------------------*/
 
@@ -262,8 +302,81 @@ footer {
 	font-size: 50px;
 	text-align: center;
 	height: 100px;
+	display: flex;
+	justify-content:center;
+	align-items: center;
 }
 
 footer a{
 	color: black;
+}
+
+/*---------------------MEDIA QUERIES------------------------------*/
+
+@media (min-width: 1024px){
+
+	#artist-credit {
+		font-size: 14px;
+	}
+	
+
+	#searchBarTitle {
+		font-size: 30px;
+	}
+
+	#searchBar {
+		font-size: 20px;
+	}
+
+	#searchBarButton {
+		font-size: 20px;
+		height: 30px
+
+	}
+
+	.sumodex-content-container {
+		flex-direction: row;
+	}
+
+	.sumodex-left-side, .sumodex-right-side {
+		width: 50%
+	}
+
+	.accordion {
+		font-size: 20px;
+		height: 60px;
+		align-self: center;
+	}
+
+	.accordion::after {
+		font-size: 30px;
+	
+	}
+	
+	.tournament-container table, #recent-tournaments-table {
+		font-size: 16px;
+		width: 100%;
+	}
+
+	.panel p {
+		margin: 0;
+		font-size: 20px;
+	}
+
+	.panel p:first-child {
+		margin: 15px 0 0;
+	}
+
+	.allowances-disqualifications-container {
+		display: flex;
+		justify-content: space-evenly;
+	}
+
+	.sumo-history-container p:last-child {
+		margin-bottom: 15px;
+	}
+
+	footer {
+		font-size: 20px;
+	}
 }
