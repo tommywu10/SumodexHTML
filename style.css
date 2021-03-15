@@ -236,6 +236,10 @@ header {
 	transition: max-height 0.2s ease-out;
   }
 
+  .panel img {
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
   .accordion:after {
 	content: '\002B'; /* Unicode character for "plus" sign (+) */
 	font-size: 60px;
@@ -253,10 +257,15 @@ header {
 	color: white;
   }
 
+  .tournament-container a {
+	  color: white;
+  }
+
   .sumo-ruleset-container {
 	background: linear-gradient(171deg, rgba(0,165,10,1) 0%, rgba(15,19,124,1) 44%, rgba(116,0,134,1) 100%);
 	color: white;
   }
+
   .sumo-ruleset-container img{
 	width: 100%;
   }
@@ -313,6 +322,9 @@ footer a{
 
 /*---------------------MEDIA QUERIES------------------------------*/
 
+
+
+
 @media (min-width: 1024px){
 
 	#artist-credit {
@@ -322,6 +334,7 @@ footer a{
 
 	#searchBarTitle {
 		font-size: 30px;
+		color: red;
 	}
 
 	#searchBar {
@@ -334,14 +347,34 @@ footer a{
 
 	}
 
+	.sumodex-main {
+		width: 60%;
+
+	}
+
+	.sumodex-left-side {
+		border-bottom: 0px;
+		border-right: 3px solid black;
+	}
+
 	.sumodex-content-container {
 		flex-direction: row;
 	}
 
-	.sumodex-left-side, .sumodex-right-side {
-		width: 50%
+
+	.info-buttons button, .picture-buttons button {
+		width: 100px;
+		height: 30px;
+		font-size: 14px;
 	}
 
+	.wrestlerPic, .wrestlerInfo {
+		width: 80%;
+	}
+
+	.wrestlerInfo p {
+		font-size: 16px;
+	}
 	.accordion {
 		font-size: 20px;
 		height: 60px;
@@ -353,6 +386,10 @@ footer a{
 	
 	}
 	
+	.tournament-container table tr:first-child {
+		text-decoration: underline;
+	}
+
 	.tournament-container table, #recent-tournaments-table {
 		font-size: 16px;
 		width: 100%;
