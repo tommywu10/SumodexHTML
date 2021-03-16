@@ -79,18 +79,27 @@ header h1 {
 #searchBar {
 	margin-top: 10px;
 	margin-bottom: 10px;
+	font-size: 1.5em;
 }
 
 #searchBarButton {
 	width: 200px;
 	height: 40px;
 	margin: 10px;
-	background-color: yellow;
-	border-radius: 20px;
+	background-color: gold;
+	border-radius: 10px;
 	font-weight: bold;
 	border: none;
+	font-size: 1.5em;
+	outline: none;
+	cursor: pointer;
+	-webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+  	transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
 }
 
+#searchBarButton:hover {
+	box-shadow: 0 0 40px 40px mediumorchid inset;
+}
 #searchBarTitle {
 	margin: 20px 0 ;
 	color: white;
@@ -150,6 +159,7 @@ header h1 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	font-size: 1.5em;
 }
 
 .wrestlerName p {
@@ -187,7 +197,6 @@ header h1 {
 .picture-buttons, .info-buttons {
 	display: flex;
 	justify-content: center;
-
 }
 
 .picture-buttons button, .info-buttons button {
@@ -199,6 +208,8 @@ header h1 {
 	color: white;
 	font-family: 'Noto Sans JP', sans-serif;
 	letter-spacing: .4px;
+	cursor: pointer;
+	outline: none;
 }
 
 .picture-buttons form, .info-buttons form {
@@ -377,8 +388,15 @@ footer {
 
 footer a{
 	color: black;
+	display: flex;
+	justify-content:center;
+	align-items: center;
 }
 
+footer img {
+	width: 20px;
+	margin: 0 10px 5px;
+}
 /*---------------------MEDIA QUERIES------------------------------*/
 
 
@@ -404,12 +422,21 @@ footer a{
 	
 	.tournament-container table {
 		font-size: 1em;
+	}
 
+	#gyoji-img {
+		width: 60%;
+		height: 300px;
 	}
 }
 
 
 @media (min-width: 1024px){
+
+	#main-heading, #main-heading-jp {
+		font-size: 2.8em;
+	}
+
 	.sumodex-content-container {
 		flex-direction: row;
 	}
@@ -440,23 +467,31 @@ footer a{
 	
 	.tournament-container table {
 		width: 100%;
+		font-size: 1em;
+	}
 
+	#recent-tournaments-table {
+		font-size: 1em;
 	}
 
 	.sumo-ruleset-body {
 		display: flex;
 		justify-content: space-evenly;
-		margin: 15px 0 0;
+		align-items: center;
+	}
+
+	.sumo-ruleset-body p:first-child {
+		margin: 0;
 	}
 
 	.sumo-ruleset-body img {
-		width: 80%;
-		margin: 0 60px 0;
+		width: 90%;
 	}
 
 	.prematch-ritual-container {
 		display: flex;
 		justify-content: space-evenly;
+		align-items: center;
 	}
 
 	.prematch-ritual-text {
